@@ -18,7 +18,7 @@ FreeSWITCH IVR configuration with Python
      </include>
 
 
-* Create the `welcome.py python file <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-ivr-python/welcome.py>`_
+* In the "/usr/share/freeswitch/scripts" folder create `welcome.py python file <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-ivr-python/welcome.py>`_
 
 
 * Restart FreeSWITCH server::
