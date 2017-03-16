@@ -1,0 +1,7 @@
+<include>
+  <extension name="welcome_ivr">
+    <condition field="destination_number" expression="^2920$">
+      <action application="python" data="welcome"/>
+    </condition>
+  </extension>
+</include>
