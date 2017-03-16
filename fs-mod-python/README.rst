@@ -13,7 +13,7 @@ Control VoIP session flow with Python codes
 
      # apt-get install python-dev python-pip -y
 
-* After installation try to find freeswitch.py file for API use (This file configured automatically from FreeSWITCH packages. This file will be used as FreeSWITCH library)::
+* After installation try to find `freeswitch.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-mod-python/freeswitch.py>`_ file for API use (This file configured automatically from FreeSWITCH packages. This file will be used as FreeSWITCH library)::
 
      root@fspush:~# find / -name freeswitch.py
      /usr/share/pyshared/freeswitch.py
@@ -36,8 +36,9 @@ Control VoIP session flow with Python codes
 
 * In the "/usr/share/freeswitch/scripts" folder create python file `fs_module.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-mod-python/fs_module.py>`_
 
-* In the /etc/freeswitch/dialplan/default.xml file search "Local_Extension" and add the following line to this extension:
-<action application="python" data="fs_module"/>
+* In the /etc/freeswitch/dialplan/default.xml file search "Local_Extension" and add the following line to this extension::
+
+     <action application="python" data="fs_module"/>
 
 
 * Give permission to write a file::
