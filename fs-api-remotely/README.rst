@@ -3,22 +3,24 @@ Control FreeSWITCH with API remotely
 ====================================
 
 * In the python code worked server install needed libraries::
+      
      # python -m pip install esl
      # python -m pip install FreeSWITCH-ESL-Python
 
-* Create script with `channel_api.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-api-remotely/channel_api.py>`
+* Create script with `channel_api.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-api-remotely/channel_api.py>`_
 
-Add the following lines to the "/etc/freeswitch/autoload_configs/acl.conf.xml" file in the FreeSWITCH server(10.50.63.228 IP is place from where channel_api.py code is connecting to the FreeSWITCH server):
+* Add the following lines to the "/etc/freeswitch/autoload_configs/acl.conf.xml" file in the FreeSWITCH server(10.50.63.228 IP is place from where channel_api.py code is connecting to the FreeSWITCH server):
     <list name="loopback.auto" default="allow">
         <node type="allow" cidr="10.50.63.228/32"/>
     </list>
 
 
-At the end restart FreeSWITCH server:
-# systemctl restart freeswitch
+* At the end restart FreeSWITCH server::
+     
+     # systemctl restart freeswitch
 
 
-If you want to see the channel variables just create getvars.sh script in the FreeSWITCH server and add the following lines to this script(Don't forget minimum one call must be present at script using time):
+* If you want to see the channel variables just create getvars.sh script in the FreeSWITCH server and add the following lines to this script(Don't forget minimum one call must be present at script using time):
 #!/usr/bin/env bash
 
 # show channels – Show online channels
