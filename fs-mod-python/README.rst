@@ -9,7 +9,7 @@ Control VoIP session flow with Python codes
      # apt-get update && apt-get dist-upgrade -y && apt-get install -y freeswitch-meta-all
 
 
-* Install development and pip::
+* Install Python development and pip packages::
 
      # apt-get install python-dev python-pip -y
 
@@ -24,11 +24,11 @@ Control VoIP session flow with Python codes
      # ll /usr/lib/pymodules/python2.7/freeswitch.py
      lrwxrwxrwx 1 root root 33 Mar 14 07:31 /usr/lib/pymodules/python2.7/freeswitch.py -> /usr/share/pyshared/freeswitch.py
 
-* Uncomment the following line in the /etc/freeswitch/autoload_configs/modules.conf.xml file::
+* Uncomment the following line in the "/etc/freeswitch/autoload_configs/modules.conf.xml" file::
 
      <load module="mod_python"/>
 
-* Note: If you want post data to web server then, in the /etc/freeswitch/dialplan/default.xml file add the following lines for the "Local_Extension"::
+* Note: If you want post data to web server then, in the "/etc/freeswitch/dialplan/default.xml" file add the following lines for the "Local_Extension"::
 
         <action application="curl" data="http://IP.addr.of.server/ post id=${destination_number}" json inline="true"/>
         <action application="set" data="respdata=${curl_response_data}"/>
@@ -36,7 +36,7 @@ Control VoIP session flow with Python codes
 
 * In the "/usr/share/freeswitch/scripts" folder create python file `fs_module.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-mod-python/fs_module.py>`_
 
-* In the /etc/freeswitch/dialplan/default.xml file search "Local_Extension" and add the following line to this extension::
+* In the "/etc/freeswitch/dialplan/default.xml" file search "Local_Extension" and add the following line to this extension::
 
      <action application="python" data="fs_module"/>
 
@@ -56,14 +56,14 @@ Control VoIP session flow with Python codes
      true
 
 
-* Call from extension 1002 to 1009 and look at result in the newfile.txt::
+* Call from extension 1002 to 1009 and look at result in the "newfile.txt" file::
 
      root@fspush:~# cat /usr/share/freeswitch/scripts/newfile.txt
      Caller Number is: 1002
      Called Number is: 1009
 
 
-* If you uncomment the following lines in the fs_module.py file then, each call will be answered with the hold_music variable::
+* If you uncomment the following lines in the "fs_module.py" file then, each call will be answered with the "hold_music" variable::
 
      #session.answer()
      #session.setHangupHook(hangup_hook)
