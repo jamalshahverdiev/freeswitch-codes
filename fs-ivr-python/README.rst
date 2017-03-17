@@ -2,7 +2,7 @@
 FreeSWITCH IVR configuration with Python
 ========================================
 
-* If you want configure your own IVR  then firstly uncomment the following line in the /etc/freeswitch/autoload_configs/modules.conf.xml file::
+* If you want configure your own IVR then firstly uncomment the following line in the "/etc/freeswitch/autoload_configs/modules.conf.xml" file::
 
      <load module="mod_flite"/>
 
