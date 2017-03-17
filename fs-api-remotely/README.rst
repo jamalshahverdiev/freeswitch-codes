@@ -7,7 +7,7 @@ Control FreeSWITCH with API remotely
      # python -m pip install esl
      # python -m pip install FreeSWITCH-ESL-Python
 
-* Create script with `channel_api.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-api-remotely/channel_api.py>`_
+* Create script with name `channel_api.py <https://github.com/jamalshahverdiev/freeswitch-codes/blob/master/fs-api-remotely/channel_api.py>`_
 
 * Add the following lines to the "/etc/freeswitch/autoload_configs/acl.conf.xml" file in the FreeSWITCH server(10.50.63.228 IP is place from where "channel_api.py" code is connecting to the FreeSWITCH server)::
      
