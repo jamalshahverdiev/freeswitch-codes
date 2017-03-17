@@ -13,7 +13,7 @@ Hidden listening sip clients with SPY module
      </extension>
 
 
-* Uncomment the following line in the '/etc/freeswitch/autoload_configs/modules.conf.xml' file::
+* Uncomment the following line in the "/etc/freeswitch/autoload_configs/modules.conf.xml" file::
 
      <load module="mod_spy"/>
 
@@ -23,5 +23,5 @@ Hidden listening sip clients with SPY module
      # systemctl restart freeswitch
 
 
-* Just call to '*01003' number to listen caller_ID "1003".
+* Just call to "*01003" number to listen caller_ID "1003".
 
