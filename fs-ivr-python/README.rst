@@ -6,9 +6,7 @@ FreeSWITCH IVR configuration with Python
 
      <load module="mod_flite"/>
 
-* Create new IVR file for the 2920 extension::
-
-     # cat /etc/freeswitch/dialplan/default/welcome.xml
+* In the "/etc/freeswitch/dialplan/default" folder create new "welcome.xml" IVR configuration file for the "2920" extension and add the following lines. This configuraions calls "welcome.py" python script file::
      <include>
        <extension name="welcome_ivr">
          <condition field="destination_number" expression="^2920$">
