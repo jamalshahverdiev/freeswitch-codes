@@ -50,13 +50,13 @@ Control VoIP session flow with Python codes
 
      # systemctl restart freeswitch
 
-* In the fs_cli console check mod_python as following::
+* In the "fs_cli" console check "mod_python" as following::
 
      freeswitch@fspush> module_exists mod_python
      true
 
 
-* Call from extension 1002 to 1009 and look at result in the "newfile.txt" file::
+* Call from extension "1002" to "1009" and look at result in the "newfile.txt" file::
 
      root@fspush:~# cat /usr/share/freeswitch/scripts/newfile.txt
      Caller Number is: 1002
