@@ -1,5 +1,3 @@
-.. highlight:: rst
-
 ===================================================================================
 This repository contains Python codes and configurations for FreeSWITCH VoIP server
 ===================================================================================
